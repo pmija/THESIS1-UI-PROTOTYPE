@@ -159,58 +159,45 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Add Account</h2>
+                    <h2>Add Group</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                   <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="accounttype">Account Type <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Group Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="accounttype">Group Laboratory <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select id="accounttype" class="form-control" required>
-                            <option value="">-- Select Account Type --</option>
-                            <option value="Faculty">Faculty</option>
-                            <option value="Technician">Technician</option>
-                            <option value="Faculty-Technician">Faculty-Technician</option>
-                            <option value="Faculty-Technician">System Admin</option>
+                            <option value="">-- Select Laboratory --</option>
+                            <option value="Faculty">CEHCI</option>
+                            <option value="Technician">CITE4D</option>
+                            <option value="Faculty-Technician">COMET</option>
+                            <option value="Faculty-Technician">ADRIC</option>
                           </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">First Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Last Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Group Members <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
+                        <div id="tags_1_tagsinput" class="tagsinput" style="width: auto; min-height: 100px; height: 100px;">
+                          <span class="tag"><span>hello&nbsp;&nbsp;</span><a href="#" title="Removing Tag">x</a></span>
+                        </div>
+                          <input type="hidden" name="groupmembers[]" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-
-                      <div class="form-group">
-                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">E-mail <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="email" class="form-control col-md-7 col-xs-12" type="text" name="email">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-1 col-sm-1 col-xs-12">
-            							<input class="form-control col-md-2 col-xs-12" type="text"  disabled placeholder="+63">
-            						</div>
-          						<div class="col-md-5 col-sm-5 col-xs-12">
-          							<input id="mobileno" name="mobileno" class="form-control col-md-5 col-xs-12" min="1000000000" max="9999999999" type="number">
-          						</div>
-                      </div>
+                     
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-12" align="center">

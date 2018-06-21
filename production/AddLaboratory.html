@@ -13,7 +13,7 @@
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
@@ -45,72 +45,82 @@
               <div class="menu_section">
                 <ul class="nav side-menu">
                   
-                  <li><a href="Dashboard.html"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="Dashboard.html"><i class="fas fa-home"></i>Home</a></li>
                   
-                  <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
-				          
-                  <li><a><i class="fa fa-users"></i>Accounts<span class="fa fa-chevron-down"></span></a>
+                  <li><a href="#"><i class="fas fa-user-circle "></i>Profile</a></li>
+                  
+                  <li><a><i class="fa fa-user"></i>Accounts<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="#">Manage Users</a></li>
-                      <li><a href="#">Add User</a></li>
+                      <li><a href="ManageUser.html">Manage Users</a></li>
+                      <li><a href="AddUser.html">Add User</a></li>
                       <li><a href="#">Evaluate Users</a></li>
 
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-users"></i>Groups<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-users"></i>Groups<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="#">Manage Groups</a></li>
+                      <li><a href="#">Manage Groups</a></li> <!-- Admin View/Edit Groups -->
                       <li><a href="#">Add Group</a></li>
-                      <li><a href="#">Edit Group</a></li>
+                      <li><a href="#">Edit Group</a></li> <!-- Student Edit Group -->
 
                     </ul>
                   </li>
                   
-                  <li><a><i class="fa fa-users"></i>Residency<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user-clock"></i>Residency<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="#">Set Residency</a></li>
-                      <li><a href="#">Edit Residency</a></li>
-                      <li><a href="#">View Residencies</a></li>
+                      <li><a href="#">Set Residency</a></li> 
+                      <li><a href="#">Manage Residency</a></li> <!-- Student View/Edit Inventory -->
+                      <li><a href="#">View Residencies</a></li> <!-- Admin View Residency -->
                       <li><a href="#">Evaluate Residency</a></li>
-                      <li><a href="#">Manage Term and Year</a></li>
+                      <li><a href="#">Manage Term and Year</a></li> 
 
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-users"></i>Laboratories<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-building"></i>Laboratories<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="#">Add Laboratory</a></li>
+                      <li><a href="#">Add Laboratory</a></li> 
                       <li><a href="#">Edit Laboratory</a></li>
-                      <li><a href="#">Edit Timeslots</a></li>
-
-                    </ul>
-                  </li>
-				          
-                  <li><a><i class="fa fa-table"></i>Inventory</a>
-                    <ul class="nav child_menu">
-
-                      <li><a href="#">View Inventory</a></li>
-                      <li><a href="#">Add Items</a></li>
-                      <li><a href="#">Edit Items</a></li>
+                      <li><a href="#">Manage Timeslots</a></li>
 
                     </ul>
                   </li>
                   
-                  <li><a><i class="fa fa-file"></i>Reports<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-warehouse"></i>Inventory<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="tables.html">Residency</a></li>
-                      <li><a href="tables_dynamic.html">Inventory</a></li>
+                      <li><a href="#">View Inventory</a></li> <!-- View Student/Group Inventory -->
+                      <li><a href="#">Add Items</a></li>
+                      <li><a href="#">Manage Items</a></li> <!-- Admin View/Edit Inventory -->
 
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-envelope"></i>Inbox</a></li>
+                  <li><a><i class="fa fa-exchange-alt"></i>Item Lending<span class="fas fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="#">Borrow Item</a></li> 
+                      <li><a href="#">Return Item</a></li>
+
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-file"></i>Reports<span class="fas fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+
+                      <li><a href="#">Groups Inventory</a></li> <!-- Faculty (Thesis Adviser) View Groups Inventory -->
+                      <li><a href="#">Groups Attendance</a></li>
+                      <li><a href="#">Student Attendance</a></li>
+
+                    </ul>
+                  </li>
+
+                  <li><a href="#"><i class="fa fa-envelope"></i>Inbox</a></li>
 
                 </ul>
               </div>
@@ -155,7 +165,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-					<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+					         <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="labname">Laboratory Name <span class="required">*</span>
@@ -179,8 +189,8 @@
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancel</button>
+                        <div class="col-md-12" align="center">
+                          <button class="btn btn-default" type="button">Cancel</button>
                           <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
@@ -199,12 +209,6 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
         <!-- /footer content -->
       </div>
     </div>

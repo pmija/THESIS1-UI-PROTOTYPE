@@ -18,7 +18,11 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
   </head>
@@ -137,7 +141,7 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                  <a href="Login.html">Log Out &nbsp;<i class="fa fa-sign-out"></i></a>
+                  <a href="Login.html">Log Out &nbsp;<i class="fa fa-sign-out-alt"></i></a>
                 </li>
               </ul>
 
@@ -154,87 +158,96 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>View Residencies</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+			
+								<!-- START Table-->
+                <div class="row">
+        					<div class="col-md-12 col-sm-12 col-xs-12">
+        						  
+        						<div class="clearfix">
+        						  
+                    <form method="POST" action="#">
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Add Account</h2>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+          						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                          <tr>
+                            <th style="width: 13%">ID Number</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>Group Name</th>
+                            <th>Laboratory</th>
+                            <th style="width: 10%">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>11412345</td>
+                            <td>Cauyao</td>
+                            <td>Bianca Marie</td>
+                            <td>TIM MIJARES</td>
+                            <td>CEHCI</td>
+                            <td class="actions"><button type="submit" name="details" class="btn btn-success" value="#">Details</button></td>
+                          </tr>
+                          <tr>
+                            <td>11412345</td>
+                            <td>Modino</td>
+                            <td>Christian</td>
+                            <td>HUKBALAHAP</td>
+                            <td>ADRIC</td>
+                            <td class="actions"><button type="submit" name="details" class="btn btn-success" value="#">Details</button></td>
+                            </tr>
+                          <tr>
+                            <td>11412345</td>
+                            <td>Mijares</td>
+                            <td>James Patrick</td>
+                            <td>TIM MIJARES</td>
+                            <td>CEHCI</td>
+                            <td class="actions"><button type="submit" name="details" class="btn btn-success" value="#">Details</button></td>
+                          </tr>
+                          <tr>
+                            <td>11412345</td>
+                            <td>Merle</td>
+                            <td>Miguel</td>
+                            <td>HUKBALAHAP</td>
+                            <td>ADRIC</td>
+                            <td class="actions"><button type="submit" name="details" class="btn btn-success" value="#">Details</button></td>
+                          </tr>
+                          <tr>
+                            <td>11412345</td>
+                            <td>Toleran</td>
+                            <td>Manuel</td>
+                            <td>TRICEP</td>
+                            <td>CEHCI</td>
+                            <td class="actions"><button type="submit" name="details" class="btn btn-success" value="#">Details</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="accounttype">Account Type <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select id="accounttype" class="form-control" required>
-                            <option value="">-- Select Account Type --</option>
-                            <option value="Faculty">Faculty</option>
-                            <option value="Technician">Technician</option>
-                            <option value="Faculty-Technician">Faculty-Technician</option>
-                            <option value="Faculty-Technician">System Admin</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">First Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
+                    </form>
 
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Last Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
+                    </div>
+        					</div>
+						
+						<!-- END Table-->
 
-                      <div class="form-group">
-                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">E-mail <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="email" class="form-control col-md-7 col-xs-12" type="text" name="email">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-1 col-sm-1 col-xs-12">
-            							<input class="form-control col-md-2 col-xs-12" type="text"  disabled placeholder="+63">
-            						</div>
-          						<div class="col-md-5 col-sm-5 col-xs-12">
-          							<input id="mobileno" name="mobileno" class="form-control col-md-5 col-xs-12" min="1000000000" max="9999999999" type="number">
-          						</div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-12" align="center">
-                          <button class="btn btn-default" type="button">Cancel</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
-
-                  </form>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
-
+          </div>
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <!-- /footer content -->
-      </div>
-    </div>
-
+        <!-- /page content -->	
+	
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
+	
     <!-- Bootstrap -->
     <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -260,7 +273,22 @@
     <!-- bootstrap-daterangepicker -->
     <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>

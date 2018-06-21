@@ -159,58 +159,56 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Add Account</h2>
+                    <h2>Manage Term and Year</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+
+                  <div class="clearfix">
+                <div class="row">
+                  <div clas="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="x_panel">
+
+                      <b style="font-size: 15px">Current Year and Term</b><hr class="no-margin">
+
+                      <div class="clearfix">
+
+                        Term 3 Year 2017-2018
+
+                      </div>
+
+                  </div>
+                </div>
+                </div>
+
+                  <div class="row">
                   <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="accounttype">Account Type <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="accounttype">Term Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select id="accounttype" class="form-control" required>
-                            <option value="">-- Select Account Type --</option>
-                            <option value="Faculty">Faculty</option>
-                            <option value="Technician">Technician</option>
-                            <option value="Faculty-Technician">Faculty-Technician</option>
-                            <option value="Faculty-Technician">System Admin</option>
-                          </select>
+                          <input type="text" id="labname" name="labname" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">First Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Start Date &amp; End Date <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fullname">Last Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="fullname" required="required" class="form-control col-md-7 col-xs-12">
+                          <fieldset>
+                            <div class="control-group">
+                              <div class="controls">
+                                <div class="input-prepend input-group">
+                                  <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                  <input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="01/01/2016 - 01/25/2016" />
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
                         </div>
                       </div>
 
-                      <div class="form-group">
-                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">E-mail <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="email" class="form-control col-md-7 col-xs-12" type="text" name="email">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-1 col-sm-1 col-xs-12">
-            							<input class="form-control col-md-2 col-xs-12" type="text"  disabled placeholder="+63">
-            						</div>
-          						<div class="col-md-5 col-sm-5 col-xs-12">
-          							<input id="mobileno" name="mobileno" class="form-control col-md-5 col-xs-12" min="1000000000" max="9999999999" type="number">
-          						</div>
-                      </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-12" align="center">
@@ -220,6 +218,7 @@
                       </div>
 
                   </form>
+                  </div>
                   </div>
                 </div>
               </div>
