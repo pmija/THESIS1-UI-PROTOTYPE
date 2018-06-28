@@ -15,7 +15,7 @@
 
 }
 
-#item-scan-modal, #item-remarks-modal {
+#item-scan-modal, #item-remarks-modal, #item-return-remarks-modal, #item-borrowed-remarks-modal {
 
     width: 550px;
 

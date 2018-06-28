@@ -23,6 +23,8 @@
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- icheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
@@ -197,7 +199,7 @@
                           <label class="control-label col-md-2 col-sm-3 col-xs-12" for="quantity" style="text-align: left;">Unique ID </label>
                           <div class="col-md-9 col-sm-6 col-xs-12">
                             <input type="number" id="unique_id_return" name="quantity" required="required" class="form-control col-md-6 col-xs-12">
-                            <button type="button" class="btn btn-primary">Register Item</button>
+                            <button type="submit" class="btn btn-primary">Register Item</button>
                           </div>
                         </div>
 
@@ -205,6 +207,7 @@
                             <thead>
                               <tr>
                                 <th>Item Name</th>
+                                <th>Qty.</th>
                                 <th style="width: 115px;">Date Borrowed</th>
                                 <th>Remarks</th>
                                 <th style="width: 175px;">Actions</th>
@@ -213,20 +216,81 @@
                             <tbody>
                               <tr>
                                 <td>Raspberry Pi 3 Model B+</td>
+                                <td>1</td>
                                 <td>06/20/2018</td>
                                 <td></td>
-                                <td class="actions"><button type="submit" name="details" class="btn btn-warning" value="#">Remarks</button>
-                                  <button type="submit" name="details" class="btn btn-default" value="#">Details</button></td>
+                                <td class="actions"><button type="button" name="details" data-toggle="modal" data-target=".div-item-return-remarks-modal" class="btn btn-warning">Remarks</button>
+                                  <button type="button" name="details" class="btn btn-default" value="#">Details</button></td>
                               </tr>
                               <tr>
                                 <td>Raspberry Pi 3 Model B</td>
+                                <td>1</td>
                                 <td>06/12/2018</td>
                                 <td></td>
-                                <td class="actions"><button type="submit" name="details" class="btn btn-warning" value="#">Remarks</button>
-                                  <button type="submit" name="details" class="btn btn-default" value="#">Details</button></td>
+                                <td class="actions"><button type="button" name="details" data-toggle="modal" data-target=".div-item-return-remarks-modal" class="btn btn-warning">Remarks</button>
+                                  <button type="button" name="details" class="btn btn-default" value="#">Details</button></td>
                               </tr>
                             </tbody>
                           </table>
+
+                          <!-- MODAL FOR RETURN ITEMS -->
+
+                          <div class="modal fade div-item-return-remarks-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog modal-sm" id="item-return-remarks-modal">
+                          <div class="modal-content">
+
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel2">Add Remarks</h4>
+                            </div>
+                            <div class="modal-body">
+
+                            <form method="POST" action="#" class="form-horizontal form-label-left">
+
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="quantity">Quantity</label>
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                  <input type="number" name="qty" required="required" class="form-control col-md-12 col-xs-12">
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="type">Remarks 
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" class="flat" name="remarks_damaged" value="damaged"> &nbsp; Damaged
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" class="flat" name="remarks_overdue" value="overdue"> &nbsp; Overdue
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="quantity">Comments</label>
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                  <input type="input" name="unique_id" required="required" class="form-control col-md-12 col-xs-12">
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+
+
+                            </form>
+
+                          </div>
+                          </div>
+                          </div>
 
                           <hr class="no-margin">
 
@@ -263,6 +327,7 @@
                               <tr>
                                 <th style="width: 15%">Item ID</th>
                                 <th style="width: 28%">Item Name</th>
+                                <th style="width: 8%">Quantity</th>
                                 <th style="width: 10%">Laboratory</th>
                                 <th style="width: 12%">Date Borrowed</th>
                                 <th>Remarks</th>
@@ -273,20 +338,22 @@
                               <tr>
                                 <td>999999999</td>
                                 <td>Raspberry Pi 3 Model B+</td>
+                                <td>1</td>
                                 <td>CEHCI</td>
                                 <td>06/20/2018</td>
                                 <td></td>
-                                <td class="actions"><button type="submit" name="details" class="btn btn-warning" value="#">Remarks</button>
-                                  <button type="submit" name="details" class="btn btn-default" value="#">Details</button></td>
+                                <td class="actions"><button type="button" name="details" class="btn btn-warning" value="#" data-toggle="modal" data-target=".div-item-borrowed-remarks-modal" class="btn btn-warning">Remarks</button>
+                                  <button type="button" name="details" class="btn btn-default" value="#">Details</button></td>
                               </tr>
                               <tr>
                                 <td>88888888</td>
                                 <td>Raspberry Pi 3 Model B</td>
+                                <td>1</td>
                                 <td>CEHCI</td>
                                 <td>06/12/2018</td>
                                 <td></td>
-                                <td class="actions"><button type="submit" name="details" class="btn btn-warning" value="#">Remarks</button>
-                                  <button type="submit" name="details" class="btn btn-default" value="#">Details</button></td>
+                                <td class="actions"><button type="button" name="details" class="btn btn-warning" value="#" data-toggle="modal" data-target=".div-item-borrowed-remarks-modal" class="btn btn-warning">Remarks</button>
+                                  <button type="button" name="details" class="btn btn-default" value="#">Details</button></td>
                               </tr>
                             </tbody>
                           </table>
@@ -300,6 +367,52 @@
                           </div>
 
                         </form>
+
+                        <!-- MODAL FOR BORROWED ITEMS -->
+
+                        <div class="modal fade div-item-borrowed-remarks-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog modal-sm" id="item-borrowed-remarks-modal">
+                          <div class="modal-content">
+
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel2">Add Remarks</h4>
+                            </div>
+                            <div class="modal-body">
+
+                            <form method="POST" action="#" class="form-horizontal form-label-left">
+
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="type">Remarks 
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" class="flat" name="remarks_damaged" value="damaged"> &nbsp; Lost Item
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="quantity">Comments</label>
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                  <input type="input" name="unique_id" required="required" class="form-control col-md-12 col-xs-12">
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+
+                            </form>
+
+                          </div>
+                          </div>
+                          </div>
 
                       </div>
         						</div>
@@ -332,6 +445,7 @@
     <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
