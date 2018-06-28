@@ -155,22 +155,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-					<div class="row">
-					<div class="column" style="float: left;height:210px;width:350px;margin-bottom:0px;margin-left:20px;">
-						
-						  <div class="x_title">
-							<h3><b>Student Information</b></h3>
-							<div class="clearfix"></div>
-						  </div>
-						  <div class="x_content">
-							<div class="dashboard-widget-content">
-							<h5><b>Unique ID No: </b> &nbsp 01234567</h5>
-							<h5><b>Student No: </b> &nbsp 11425733</h5>
-							<h5><b>Name: </b> &nbsp Bianca Marie R. Cauyao</h5>
-								</div>
-							</div>
-					</div>
-					<div class="column" style="float: right;height:210px;width:550px;margin-bottom:0px;margin-right:20px">
+					<div class="column" style="display:block;margin-left:auto;margin-right:auto;height:270px;width:550px;margin-bottom:0px;">
 						<div class="x_panel">
 						  <div class="x_title">
 							<h3><b>Items</b></h3>
@@ -196,15 +181,49 @@
 							  </tr>
 							</table>
 							<br>
-							<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
-								<button type="submit" class="btn btn-success">Submit</button>
+							<div class="ln_solid"></div>
+							<div class="">
+								<!-- GET UNIQUE ID -->
+								<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+								  <div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="uniqueid">Unique ID<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+									  <input type="number" id="uniqueid" name="uniqueid" required="required" class="form-control col-md-7 col-xs-12">
+									</div>
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Submit</button>
+								  </div>
+								</form>
+								
+								<!-- Modal -->
+								<div id="myModal" class="modal fade" role="dialog">
+								  <div class="modal-dialog modal-sm">
+
+									<!-- Modal content-->
+									<div class="modal-content">
+									  <div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Student Information</h4>
+									  </div>
+									  <div class="modal-body">
+										<h5><b>Unique ID No: </b> &nbsp 01234567</h5>
+										<h5><b>Student No: </b> &nbsp 11425733</h5>
+										<h5><b>Name: </b> &nbsp Bianca Marie R. Cauyao</h5>
+									  </div>
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									  </div>
+									</div>
+
+								  </div>
+								</div>
 							</div>
 							</div>
 							</div>
 						</div>
 					</div>
 
-					</div>
 											<!-- START Table-->
 						<div class="col-md-12 col-sm-12 col-xs-12">
 						  

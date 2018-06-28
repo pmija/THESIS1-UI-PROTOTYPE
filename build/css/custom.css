@@ -1,6 +1,26 @@
 
 /* Custom CSS */
 
+#unique_id_return {
+
+    width: 68%;
+    margin-right: 15px;
+
+}
+
+#unique_id_readonly {
+
+    width: 80%;
+    margin-right: 15px;
+
+}
+
+#item-scan-modal, #item-remarks-modal {
+
+    width: 550px;
+
+}
+
 .gen-info {
 
     font-size: 12px;
