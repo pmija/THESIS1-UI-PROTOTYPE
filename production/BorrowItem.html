@@ -155,23 +155,114 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-					<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+					<div class="column" style="display:block;margin-left:auto;margin-right:auto;height:270px;width:550px;margin-bottom:0px;">
+						<div class="x_panel">
+						  <div class="x_title">
+							<h3><b>Items</b></h3>
+							<div class="clearfix"></div>
+						  </div>
+						  <div class="x_content">
+							<div class="dashboard-widget-content">
+							<table style="width:100%">
+							  <tr>
+								<th>Item Name</th>
+								<th>Quantity</th> 
+								<th></th>
+							  </tr>
+							  <tr>
+								<td>Arduino</td>
+								<td>1</td> 
+								<td><i class="fa fa-remove"></i></td>
+							  </tr>
+							  <tr>
+								<td>Breadboard</td>
+								<td>2</td> 
+								<td><i class="fa fa-remove"></i></td>
+							  </tr>
+							</table>
+							<br>
+							<div class="ln_solid"></div>
+							<div class="">
+								<!-- GET UNIQUE ID -->
+								<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
-					  <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="uniqueid">Unique ID<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="uniqueid" name="uniqueid" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
-                          <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
+								  <div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="uniqueid">Unique ID<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+									  <input type="number" id="uniqueid" name="uniqueid" required="required" class="form-control col-md-7 col-xs-12">
+									</div>
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Submit</button>
+								  </div>
+								</form>
+								
+								<!-- Modal -->
+								<div id="myModal" class="modal fade" role="dialog">
+								  <div class="modal-dialog modal-sm">
 
-                    </form>
+									<!-- Modal content-->
+									<div class="modal-content">
+									  <div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Student Information</h4>
+									  </div>
+									  <div class="modal-body">
+										<h5><b>Unique ID No: </b> &nbsp 01234567</h5>
+										<h5><b>Student No: </b> &nbsp 11425733</h5>
+										<h5><b>Name: </b> &nbsp Bianca Marie R. Cauyao</h5>
+									  </div>
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									  </div>
+									</div>
+
+								  </div>
+								</div>
+							</div>
+							</div>
+							</div>
+						</div>
+					</div>
+
+											<!-- START Table-->
+						<div class="col-md-12 col-sm-12 col-xs-12">
+						  
+						  <div class="x_title">
+							<h5><big><b>Inventory</b></big></h5>
+							<div class="clearfix"></div>
+						  </div>
+							<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+							  <thead>
+								<tr>
+								  <th>Product Name</th>
+								  <th>Description</th>
+								  <th>Quantity</th>
+								  <th>Status</th>
+								  <th></th>
+								</tr>
+							  </thead>
+							  <tbody>
+								
+								<tr>
+								  <td>Breadboard</th>
+								  <td>This item is used to ..</td>
+								  <td>10</td>
+								  <td>Available</td>
+								  <td align="center"><button type="submit" class="btn btn-success">Add</button></td>
+								</tr>
+								<tr>
+								  <td>Arduino</th>
+								  <td>This item is used to ..</td>
+								  <td>10</td>
+								  <td>Available</td>
+								  <td align="center"><button type="submit" class="btn btn-success">Add</button></td>
+								</tr>
+							  </tbody>
+							</table>
+						  
+						</div>
+						
+						<!-- END Table-->
 
                   </div>
                 </div>
@@ -179,18 +270,12 @@
             </div>
 
 
-
           </div>
         </div>
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
+        
         <!-- /footer content -->
       </div>
     </div>
@@ -225,7 +310,22 @@
     <!-- bootstrap-daterangepicker -->
     <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>
