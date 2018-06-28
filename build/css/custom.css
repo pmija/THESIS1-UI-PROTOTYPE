@@ -1,7 +1,14 @@
 
 /* Custom CSS */
 
-#unique_id_return {
+#unique_id_student_borrow {
+
+    width: 59%;
+    margin-right: 10px;
+
+}
+
+#unique_id_return, #unique_id_borrow {
 
     width: 68%;
     margin-right: 15px;
@@ -15,7 +22,9 @@
 
 }
 
-#item-scan-modal, #item-remarks-modal, #item-return-remarks-modal, #item-borrowed-remarks-modal {
+#item-scan-modal, #item-remarks-modal, #item-return-remarks-modal, 
+#item-borrowed-remarks-modal, #checkout-items-modal, #confirm-return-items-modal,
+#register-itemid-borrow-modal, #register-itemid-return-modal {
 
     width: 550px;
 
